@@ -27,6 +27,21 @@ img {
   object-fit: cover;
   filter: grayscale(100%) contrast(1.08);
   display: block;
+  transition: filter 0.6s ease-out;
+}
+
+/* Hover effect for laptop/desktop */
+@media (min-width: 1025px) {
+  img:hover {
+    filter: grayscale(0%) contrast(1.08);
+  }
+}
+
+/* Scroll reveal effect for mobile/tablet */
+@media (max-width: 1024px) {
+  img.color-active {
+    filter: grayscale(0%) contrast(1.08);
+  }
 }
 
 a {
