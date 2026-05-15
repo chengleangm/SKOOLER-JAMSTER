@@ -23,15 +23,24 @@ form.addEventListener("submit", function (e) {
   input.value = "";
 });
 
-// Image scroll reveal for mobile/tablet
-const images = document.querySelectorAll("img");
+// Image scroll reveal for mobile/tablet - Center detection
+const allImages = document.querySelectorAll("img");
+let scrollTimeout;
 
-function revealImagesOnScroll() {
-  images.forEach(img => {
+function checkImageInCenter() {
+  const windowHeight = window.innerHeight;
+  const centerThreshold = windowHeight / 2;
+
+  allImages.forEach(img => {
+    // Get image position relative to viewport
     const rect = img.getBoundingClientRect();
-    const isInMiddle = rect.top < window.innerHeight * 0.75 && rect.bottom > window.innerHeight * 0.25;
+    const imageCenter = rect.top + rect.height / 2;
     
-    if (isInMiddle) {
+    // Check if image center is near viewport center (with tolerance)
+    const distanceFromCenter = Math.abs(imageCenter - centerThreshold);
+    const tolerance = windowHeight * 0.4; // 40% tolerance
+    
+    if (distanceFromCenter < tolerance && rect.height > 0) {
       img.classList.add("color-active");
     } else {
       img.classList.remove("color-active");
@@ -39,10 +48,21 @@ function revealImagesOnScroll() {
   });
 }
 
-// Detect if device is mobile/tablet (not laptop)
-const isMobile = window.innerWidth <= 1024;
+// Detect if device is mobile/tablet
+const isMobileDevice = window.innerWidth <= 1024;
 
-if (isMobile) {
-  window.addEventListener("scroll", revealImagesOnScroll);
-  revealImagesOnScroll();
+if (isMobileDevice) {
+  // Check on page load
+  window.addEventListener("load", () => {
+    setTimeout(checkImageInCenter, 200);
+  });
+  
+  // Check on scroll - optimized
+  window.addEventListener("scroll", () => {
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(checkImageInCenter, 30);
+  }, { passive: true });
+  
+  // Initial check
+  setTimeout(checkImageInCenter, 100);
 }
