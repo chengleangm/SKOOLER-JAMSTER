@@ -476,6 +476,432 @@ footer h2 {
   }
 }
 
+/* TABLET: 768px and below - Editorial mobile experience */
+@media (max-width: 768px) {
+  .page {
+    width: 100%;
+    padding: 20px 14px;
+    background: #f5f5f3;
+  }
+
+  /* HEADER - Compact and bold */
+  .header {
+    height: auto;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 12px;
+  }
+
+  .header nav {
+    justify-content: center;
+    gap: 18px;
+    font-size: 8px;
+    font-weight: 900;
+  }
+
+  .header nav:last-child {
+    justify-content: center;
+  }
+
+  .logo {
+    font-size: 14px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+  }
+
+  /* HERO - Editorial image stacking with strong spacing */
+  .hero {
+    margin-top: 20px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 20px;
+  }
+
+  .hero-top {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .hero-img {
+    height: 280px;
+    border: 1px solid #ddd;
+  }
+
+  .hero-img.center {
+    height: 320px;
+    border: 1px solid #ddd;
+  }
+
+  .hero-img.right {
+    height: 280px;
+    margin-top: 0 !important;
+    border: 1px solid #ddd;
+  }
+
+  .hero-img p {
+    max-width: 100%;
+    font-size: 8px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-top: 8px;
+  }
+
+  .hero h1 {
+    font-size: clamp(42px, 12vw, 90px);
+    letter-spacing: -3px;
+    margin-top: 12px;
+    line-height: 0.85;
+    font-family: Anton, sans-serif;
+    font-weight: 900;
+  }
+
+  .hero-meta {
+    flex-direction: column;
+    gap: 6px;
+    font-size: 7px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-top: 10px;
+  }
+
+  /* ARRIVALS - 1 column with strong styling */
+  .arrivals {
+    margin-top: 32px;
+  }
+
+  .section-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 12px;
+  }
+
+  .section-head h2,
+  .collections h2,
+  .newsletter h2 {
+    font-size: clamp(32px, 8vw, 52px);
+    letter-spacing: -2px;
+    font-weight: 900;
+  }
+
+  .section-head a {
+    font-size: 8px;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  .ghost-number {
+    position: relative;
+    right: auto;
+    top: auto;
+    font-size: clamp(80px, 20vw, 140px);
+    color: rgba(0,0,0,0.04);
+    margin: -20px 0 -20px 0;
+    line-height: 0.8;
+    z-index: 0;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 14px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .product {
+    border: 1px solid #ddd;
+    padding: 0;
+  }
+
+  .product img {
+    height: 320px;
+  }
+
+  .product h3 {
+    font-size: 11px;
+    margin-top: 12px;
+    margin-left: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  .product p {
+    font-size: 8px;
+    margin: 4px 12px 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  /* ABOUT - Stacked with slight overlap for editorial feel */
+  .about {
+    margin-top: 32px;
+  }
+
+  .ghost-word {
+    display: none;
+  }
+
+  .about-layout {
+    position: static;
+    height: auto;
+    display: grid;
+    gap: 18px;
+    margin-top: 16px;
+  }
+
+  .about-img,
+  .about-text {
+    position: static !important;
+    width: 100% !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+  }
+
+  .about-img {
+    height: 300px;
+    border: 1px solid #ddd;
+  }
+
+  .about-text {
+    width: 100%;
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 1.6;
+    text-transform: uppercase;
+    padding: 12px;
+    border: 1px solid #ddd;
+    background: #fafaf8;
+  }
+
+  /* COLLECTIONS - Clean row stacking */
+  .collections {
+    margin-top: 32px;
+  }
+
+  .tabs {
+    margin: 14px 0;
+    gap: 6px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .tabs button {
+    padding: 7px 14px;
+    font-size: 8px;
+    font-weight: 900;
+    text-transform: uppercase;
+    border: 1px solid #111;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .tabs button.active {
+    background: #000;
+    color: #fff;
+  }
+
+  .collection-row {
+    border-top: 1px solid #000;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 18px 0;
+  }
+
+  .collection-row:last-child {
+    border-bottom: 1px solid #000;
+  }
+
+  .collection-row h3 {
+    font-family: Anton, sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+  }
+
+  .collection-row p {
+    font-size: 9px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .collection-row img {
+    width: 100%;
+    height: 260px;
+    border: 1px solid #ddd;
+  }
+
+  /* TIMELESS - Big title with stacked images */
+  .timeless {
+    height: auto;
+    position: relative;
+    margin-top: 32px;
+  }
+
+  .timeless h2 {
+    position: static;
+    font-family: Anton, sans-serif;
+    font-size: clamp(52px, 14vw, 110px);
+    line-height: 0.8;
+    letter-spacing: -4px;
+    margin-bottom: 16px;
+    z-index: 3;
+    font-weight: 900;
+  }
+
+  .timeless img {
+    position: static !important;
+    width: 100% !important;
+    z-index: 2 !important;
+    height: 280px !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    border: 1px solid #ddd;
+    margin-bottom: 14px;
+  }
+
+  .t1,
+  .t2,
+  .t3 {
+    width: 100% !important;
+    height: 280px !important;
+    border: 1px solid #ddd;
+    margin-bottom: 14px;
+  }
+
+  .t3 {
+    margin-bottom: 0;
+  }
+
+  /* NEWSLETTER - Editorial stacking */
+  .newsletter {
+    margin-top: 32px;
+  }
+
+  .newsletter h2 {
+    font-size: clamp(28px, 7vw, 48px);
+  }
+
+  .newsletter h3 {
+    font-family: Anton, sans-serif;
+    font-size: 22px;
+    margin-top: 14px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+  }
+
+  .newsletter p {
+    font-size: 9px;
+    line-height: 1.6;
+    margin: 8px 0 16px;
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+
+  .newsletter-grid {
+    margin-top: 14px;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .newsletter-grid > img {
+    height: 320px;
+    border: 1px solid #ddd;
+  }
+
+  .newsletter-grid div {
+    border: 1px solid #ddd;
+    padding: 14px;
+    background: #fafaf8;
+  }
+
+  .newsletter-grid div img {
+    height: 240px;
+    border: 1px solid #ddd;
+  }
+
+  form {
+    display: flex;
+    border: 1px solid #111;
+    height: 36px;
+    margin-top: 10px;
+  }
+
+  input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 0 12px;
+    font-size: 9px;
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+
+  form button {
+    width: 44px;
+    border: none;
+    border-left: 1px solid #111;
+    background: transparent;
+    cursor: pointer;
+    font-weight: 900;
+  }
+
+  /* FOOTER - Bold and stacked */
+  footer {
+    margin-top: 32px;
+    margin-bottom: 16px;
+    border-top: 1px solid #ddd;
+    padding-top: 16px;
+  }
+
+  .footer-links {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .footer-links div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-links a {
+    font-size: 8px;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  .socials {
+    flex-direction: row !important;
+    justify-content: flex-start;
+    gap: 14px;
+  }
+
+  footer h2 {
+    margin-top: 24px;
+    font-family: Anton, sans-serif;
+    font-size: clamp(42px, 10vw, 100px);
+    line-height: 0.8;
+    letter-spacing: -3px;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+}
+
 /* iPad/Tablet: 768px and below */
 @media (max-width: 768px) {
   .page {
@@ -769,45 +1195,53 @@ footer h2 {
   }
 }
 
-/* PHONE: 480px and below */
+/* PHONE: 480px and below - Compact mobile magazine */
 @media (max-width: 480px) {
   .page {
     width: 100%;
-    padding: 14px 12px;
+    padding: 14px 10px;
   }
 
+  /* HEADER - Ultra compact */
   .header {
     height: auto;
     grid-template-columns: 1fr;
+    align-items: center;
     gap: 10px;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
   }
 
   .header nav {
+    justify-content: center;
     gap: 12px;
-    font-size: 8px;
+    font-size: 7px;
   }
 
   .logo {
-    font-size: 12px;
-    letter-spacing: 0.5px;
+    font-size: 11px;
   }
 
-  /* HERO */
+  /* HERO - Compact stacking */
   .hero {
-    margin-top: 12px;
+    margin-top: 14px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 14px;
   }
 
   .hero-top {
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 12px;
+    margin-bottom: 12px;
   }
 
   .hero-img,
   .hero-img.center,
   .hero-img.right {
-    height: 200px;
+    height: 220px;
     margin-top: 0 !important;
+    border: 1px solid #ddd;
   }
 
   .hero-img p {
@@ -817,39 +1251,42 @@ footer h2 {
   }
 
   .hero h1 {
-    font-size: clamp(32px, 10vw, 60px);
-    letter-spacing: -3px;
-    margin-top: 10px;
-    line-height: 0.85;
+    font-size: clamp(28px, 9vw, 52px);
+    letter-spacing: -2px;
+    margin-top: 8px;
+    line-height: 0.9;
   }
 
   .hero-meta {
     flex-direction: column;
-    gap: 6px;
-    font-size: 7px;
-    margin-top: 8px;
+    gap: 4px;
+    font-size: 6px;
+    margin-top: 6px;
   }
 
-  /* ARRIVALS */
+  /* ARRIVALS - Single column */
   .arrivals {
-    margin-top: 50px;
+    margin-top: 24px;
   }
 
   .section-head {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
   }
 
   .section-head h2,
   .collections h2,
   .newsletter h2 {
-    font-size: clamp(20px, 6vw, 36px);
-    letter-spacing: -0.5px;
+    font-size: clamp(20px, 7vw, 36px);
+    letter-spacing: -1px;
   }
 
   .section-head a {
-    font-size: 8px;
+    font-size: 7px;
   }
 
   .ghost-number {
@@ -858,8 +1295,12 @@ footer h2 {
 
   .product-grid {
     grid-template-columns: 1fr;
-    gap: 16px;
-    margin-top: 12px;
+    gap: 12px;
+    margin-top: 10px;
+  }
+
+  .product {
+    border: 1px solid #ddd;
   }
 
   .product img {
@@ -869,15 +1310,17 @@ footer h2 {
   .product h3 {
     font-size: 10px;
     margin-top: 8px;
+    margin-left: 8px;
   }
 
   .product p {
     font-size: 7px;
+    margin: 3px 8px 8px;
   }
 
-  /* ABOUT */
+  /* ABOUT - Stacked cleanly */
   .about {
-    margin-top: 50px;
+    margin-top: 24px;
   }
 
   .ghost-word {
@@ -886,9 +1329,9 @@ footer h2 {
 
   .about-layout {
     display: grid;
-    gap: 10px;
+    gap: 12px;
     height: auto;
-    margin-top: 12px;
+    margin-top: 10px;
   }
 
   .about-img,
@@ -898,21 +1341,25 @@ footer h2 {
   }
 
   .about-img {
-    height: 260px;
+    height: 240px;
+    border: 1px solid #ddd;
   }
 
   .about-text {
     font-size: 9px;
     line-height: 1.5;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background: #fafaf8;
   }
 
-  /* COLLECTIONS */
+  /* COLLECTIONS - Stacked rows */
   .collections {
-    margin-top: 50px;
+    margin-top: 24px;
   }
 
   .tabs {
-    margin: 12px 0;
+    margin: 10px 0;
     gap: 4px;
     flex-wrap: wrap;
   }
@@ -923,13 +1370,18 @@ footer h2 {
   }
 
   .collection-row {
+    border-top: 1px solid #000;
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 8px;
     padding: 12px 0;
   }
 
+  .collection-row:last-child {
+    border-bottom: 1px solid #000;
+  }
+
   .collection-row h3 {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .collection-row p {
@@ -937,39 +1389,46 @@ footer h2 {
   }
 
   .collection-row img {
-    height: 200px;
+    height: 220px;
+    border: 1px solid #ddd;
   }
 
-  /* TIMELESS */
+  /* TIMELESS - Compact stacking */
   .timeless {
     height: auto;
-    margin-top: 50px;
+    margin-top: 24px;
   }
 
   .timeless h2 {
-    font-size: clamp(28px, 8vw, 60px);
-    line-height: 0.9;
+    font-size: clamp(24px, 7vw, 52px);
+    line-height: 0.85;
     letter-spacing: -2px;
     margin-bottom: 10px;
   }
 
   .timeless img {
     width: 100% !important;
-    height: 200px !important;
+    height: 220px !important;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
   }
 
-  /* NEWSLETTER */
+  .t3 {
+    margin-bottom: 0;
+  }
+
+  /* NEWSLETTER - Compact */
   .newsletter {
-    margin-top: 50px;
+    margin-top: 24px;
   }
 
   .newsletter h2 {
-    font-size: clamp(18px, 5vw, 32px);
+    font-size: clamp(18px, 6vw, 32px);
   }
 
   .newsletter h3 {
     font-size: 16px;
-    margin-top: 10px;
+    margin-top: 8px;
   }
 
   .newsletter p {
@@ -979,21 +1438,29 @@ footer h2 {
   }
 
   .newsletter-grid {
-    margin-top: 12px;
+    margin-top: 10px;
     grid-template-columns: 1fr;
     gap: 10px;
   }
 
   .newsletter-grid > img {
     height: 260px;
+    border: 1px solid #ddd;
+  }
+
+  .newsletter-grid div {
+    border: 1px solid #ddd;
+    padding: 10px;
+    background: #fafaf8;
   }
 
   .newsletter-grid div img {
     height: 200px;
+    border: 1px solid #ddd;
   }
 
   form {
-    height: 30px;
+    height: 32px;
   }
 
   input {
@@ -1005,34 +1472,36 @@ footer h2 {
     width: 36px;
   }
 
-  /* FOOTER */
+  /* FOOTER - Stacked footer */
   footer {
-    margin-top: 50px;
-    margin-bottom: 16px;
+    margin-top: 24px;
+    margin-bottom: 12px;
+    border-top: 1px solid #ddd;
+    padding-top: 12px;
   }
 
   .footer-links {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 10px;
   }
 
   .footer-links div {
-    gap: 6px;
+    gap: 5px;
   }
 
   .footer-links a {
-    font-size: 8px;
+    font-size: 7px;
   }
 
   .socials {
     justify-content: flex-start !important;
     flex-direction: row !important;
-    gap: 16px;
+    gap: 12px;
   }
 
   footer h2 {
-    margin-top: 30px;
-    font-size: clamp(28px, 8vw, 80px);
+    margin-top: 16px;
+    font-size: clamp(24px, 7vw, 60px);
     letter-spacing: -2px;
   }
 }
